@@ -16,7 +16,7 @@ let processPost = (req, res) => {
         if (req.body.type == 'verification') {
             verifyCallback(req, res);
         } else {
-            if (req.body.userName == 'Salesforce Bot') { // TODO: Change this to the name of your app, so that you won't respond to your own messages!
+            if (req.body.userName == 'Salesforce Messanger') { // TODO: Change this to the name of your app, so that you won't respond to your own messages!
                 res.sendStatus(200);
                 return;
             }
