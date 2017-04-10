@@ -16,7 +16,7 @@ let processPost = (req, res) => {
         if (req.body.type == 'verification') {
             verifyCallback(req, res);
         } else {
-            if (req.body.userName == 'Watson Bot New') { // TODO: Change this to the name of your app, so that you won't respond to your own messages!
+            if (req.body.userName == 'Salesforce Messanger') { // TODO: Change this to the name of your app, so that you won't respond to your own messages!
                 res.sendStatus(200);
                 return;
             }
@@ -32,7 +32,7 @@ let processText = (message, spaceId)  => {
     let match;
     match = message.match(/help/i);
     if (match) {
-        wwMessaging.sendMessage('Salesforce Bot', spaceId, 'Help',
+        wwMessaging.sendMessage('Salesforce Messanger', spaceId, 'Help',
             `You can ask me things like:
     Search account Acme
         `);
